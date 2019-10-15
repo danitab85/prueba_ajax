@@ -5,7 +5,7 @@ ActiveAdmin.register Complaint do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :user_id, :company_id, :content
+  permit_params :user_id, :company_id, :content
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Complaint do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end
