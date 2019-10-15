@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Companies</h1>
-
+<%= render 'form', company:@company %>
 <table>
   <thead>
     <tr>
@@ -11,14 +11,7 @@
   </thead>
 
   <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @companies %>
   </tbody>
 </table>
 
