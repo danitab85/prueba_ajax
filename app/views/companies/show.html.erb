@@ -6,7 +6,7 @@
 </p>
 
 <%= render 'complaints/form', complaint: @complaint, company: @company %>
-<ul>
+<ul id="admin">
   <% @company.complaints.order(created_at: :desc).each do |complaint| %>
     <li><%= complaint.content %>
     <%= complaint.user.email %></li>
